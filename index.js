@@ -31,6 +31,7 @@ app.get("/", (req, res) => {
   console.log(req.hostname)
   console.log(req.host)
   console.log(req.url)
+  console.log(req)
   res.sendFile("faz_mug.jpg", {
     root: "./public"
   })
