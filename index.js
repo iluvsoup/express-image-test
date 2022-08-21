@@ -17,6 +17,8 @@ const express = require("express")
 const app = express()
 const port = process.env.port || 1337
 
+app.use(express.static("public"))
+
 app.get("/", (req, res) => {
   console.log(req)
   res.sendFile("faz_mug.jpg", {
