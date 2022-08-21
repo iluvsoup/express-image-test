@@ -24,6 +24,7 @@ app.use(express.static(
 ))
 
 app.get("/", (req, res) => {
+  console.log(req)
   console.log(req.ip)
   console.log(req.get("host"))
   console.log(req.get("origin"))
@@ -33,7 +34,6 @@ app.get("/", (req, res) => {
   console.log(req.hostname)
   console.log(req.host)
   console.log(req.url)
-  console.log(req)
   res.sendFile("faz_mug.jpg", {
     root: "./public"
   })
