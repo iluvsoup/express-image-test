@@ -19,14 +19,16 @@ const path = require('path');
 const app = express()
 const port = process.env.port || 1337
 
-app.use(express.static(path.join(__dirname, "public")))
+app.use(express.static(
+  path.join(__dirname, "public")
+))
 
 app.get("/", (req, res) => {
   console.log(req)
-  // res.sendFile("faz_mug.jpg", {
-  //   root: "./public"
-  // })
-  res.send("Hello")
+  res.sendFile("faz_mug.jpg", {
+    root: "./public"
+  })
+  // res.send("Hello")
 })
 
 app.listen(port, () => {
