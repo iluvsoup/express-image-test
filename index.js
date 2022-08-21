@@ -19,10 +19,10 @@ const port = process.env.port || 1337
 
 app.get("/", (req, res) => {
   console.log(req)
-  // res.sendFile("faz_mug.jpg", {
-  //   root: "./images"
-  // })
-  res.send("Hello")
+  res.sendFile("faz_mug.jpg", {
+    root: "./public"
+  })
+  // res.send("Hello")
 })
 
 app.listen(port, () => {
