@@ -25,6 +25,7 @@ app.use(express.static(
 
 app.get("/", (req, res) => {
   console.log(req)
+  console.log(req.url)
   res.sendFile("faz_mug.jpg", {
     root: "./public"
   })
