@@ -21,10 +21,10 @@ app.use(express.static("public"))
 
 app.get("/", (req, res) => {
   console.log(req)
-  res.sendFile("faz_mug.jpg", {
-    root: "./public"
-  })
-  // res.send("Hello")
+  // res.sendFile("faz_mug.jpg", {
+  //   root: "./public"
+  // })
+  res.send("Hello")
 })
 
 app.listen(port, () => {
